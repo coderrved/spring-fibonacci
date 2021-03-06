@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form th:action="@{/hesapla}"  th:object="${fibonacci}" method="post">
+
+        <label>Value:</label>
+        <input type="text" id="value" name="value" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+        <br>
+        <input type="submit" value="Gonder">
+    </form>
+
+    <!-- <a th:href="@{/logout}">Giriş Yap</a> -->
+
+</body>
+</html>
